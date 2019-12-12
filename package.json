@@ -4,35 +4,56 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "start": "per-env",
+    "start:production": "npm run -s serve",
+    "start:development": "npm run -s dev",
     "build": "preact build",
-    "serve": "preact build && preact serve",
+    "serve": "preact build && serve build --single",
     "dev": "preact watch",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "lint:watch": "esw -w --fix src",
+    "test": "jest"
   },
   "eslintConfig": {
-    "extends": "eslint-config-synacor",
-    "rules": {
-      "no-unused-vars": "warn",
-      "react/sort-comp": "off",
-      "lines-around-comment": "off",
-      "react/prefer-stateless-function": "off"
-    }
+    "extends": "eslint-config-synacor"
   },
   "eslintIgnore": [
     "build/*"
   ],
   "devDependencies": {
-    "eslint": "^4.5.0",
-    "eslint-config-synacor": "^1.1.0",
-    "if-env": "^1.0.0",
-    "preact-cli": "^2.0.0"
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-preact-pure": "^2.0.0",
+    "eslint": "^6.7.2",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-preact": "^1.1.6",
+    "eslint-config-synacor": "^3.0.4",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-watch": "^6.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "jest-preset-preact": "^1.0.0",
+    "per-env": "^1.0.2",
+    "preact-cli": "^3.0.0-rc.6",
+    "preact-render-spy": "^1.2.1",
+    "serve": "^11.1.0"
   },
   "dependencies": {
-    "preact": "^8.5.2",
-    "preact-compat": "^3.17.0",
-    "preact-render-to-string": "^4.1.0",
-    "preact-router": "^2.5.5",
-    "preact-material-components": "^1.4.3"
+    "bootstrap": "^4.4.1",
+    "preact": "^10.0.1",
+    "preact-head-tag": "^0.2.0",
+    "preact-render-to-string": "^5.1.0",
+    "preact-router": "^3.0.0"
+  },
+  "jest": {
+    "preset": "jest-preset-preact",
+    "setupFiles": [
+      "<rootDir>/tests/__mocks__/browserMocks.js",
+      "<rootDir>/tests/__mocks__/setupTests.js"
+    ]
   }
 }
