@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "zeburek.github.io",
+  "homepage": "http://zeburek.github.io",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -8,6 +9,8 @@
     "start:production": "npm run -s serve",
     "start:development": "npm run -s dev",
     "build": "preact build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "serve": "preact build && serve build --single",
     "dev": "preact watch",
     "lint": "eslint src",
@@ -34,6 +37,7 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-watch": "^6.0.1",
+    "gh-pages": "^2.1.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "jest-preset-preact": "^1.0.0",
