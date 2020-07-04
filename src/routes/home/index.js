@@ -3,7 +3,7 @@ import ProjectItem from './projectItem'
 
 const maintained = [
   {
-    title: 'python-apitist',
+    title: 'apitist',
     description: 'Project which is pointed to minify code in python API testing.',
     href: 'https://github.com/zeburek/python-apitist',
     badgesFunc: () => (
@@ -11,11 +11,30 @@ const maintained = [
         <a href='https://github.com/zeburek/python-apitist/actions'>
           <img src='https://img.shields.io/github/workflow/status/zeburek/python-apitist/Python%20package/master' />
         </a>{' '}
-        <a href='https://badge.fury.io/py/python-apitist'>
-          <img src='https://badge.fury.io/py/python-apitist.svg' />
+        <a href='https://badge.fury.io/py/apitist'>
+          <img src='https://badge.fury.io/py/apitist.svg' />
         </a>{' '}
-        <a href='https://pypi.python.org/pypi/python-apitist/'>
-          <img src='https://img.shields.io/pypi/dm/python-apitist.svg' />
+        <a href='https://pypi.python.org/pypi/apitist/'>
+          <img src='https://img.shields.io/pypi/dm/apitist' />
+        </a>
+      </Fragment>
+    ),
+    color: 'success'
+  },
+  {
+    title: 'zelenium',
+    description: 'New Selenium framework for Python with base pages and elements',
+    href: 'https://github.com/zeburek/zelenium',
+    badgesFunc: () => (
+      <Fragment>
+        <a href='https://github.com/zeburek/zelenium/actions'>
+          <img src='https://img.shields.io/github/workflow/status/zeburek/zelenium/Python%20package/master' />
+        </a>{' '}
+        <a href='https://badge.fury.io/py/zelenium'>
+          <img src='https://badge.fury.io/py/zelenium.svg' />
+        </a>{' '}
+        <a href='https://pypi.python.org/pypi/zelenium/'>
+          <img src='https://img.shields.io/pypi/dm/zelenium' />
         </a>
       </Fragment>
     ),
@@ -37,13 +56,93 @@ const maintained = [
           <img src='https://badge.fury.io/py/convclasses.svg' />
         </a>{' '}
         <a href='https://pypi.python.org/pypi/convclasses/'>
-          <img src='https://img.shields.io/pypi/dm/convclasses.svg' />
+          <img src='https://img.shields.io/pypi/dm/convclasses' />
         </a>
       </Fragment>
     ),
     color: 'success'
   }
 ]
+
+const qase = [
+  {
+    title: 'qase-python',
+    description: 'Qase TMS Python Api Client',
+    href: 'https://github.com/qase-tms/qase-python',
+    badgesFunc: () => (
+      <Fragment>
+        <a href='https://github.com/qase-tms/qase-python/actions'>
+          <img src='https://img.shields.io/github/workflow/status/qase-tms/qase-python/Python%20package/master' />
+        </a>{' '}
+        <a href='https://pypi.python.org/pypi/qaseio'>
+          <img src='https://img.shields.io/pypi/v/qaseio' />
+        </a>{' '}
+        <a href='https://pypi.python.org/pypi/qaseio/'>
+          <img src='https://img.shields.io/pypi/dm/qaseio' />
+        </a>
+      </Fragment>
+    ),
+    color: 'success'
+  },
+  {
+    title: 'qase-pytest',
+    description: 'Qase TMS Pytest Plugin',
+    href: 'https://github.com/qase-tms/qase-pytest',
+    badgesFunc: () => (
+      <Fragment>
+        <a href='https://github.com/qase-tms/qase-pytest/actions'>
+          <img src='https://img.shields.io/github/workflow/status/qase-tms/qase-pytest/Python%20package/master' />
+        </a>{' '}
+        <a href='https://pypi.python.org/pypi/qase-pytest'>
+          <img src='https://img.shields.io/pypi/v/qase-pytest' />
+        </a>{' '}
+        <a href='https://pypi.python.org/pypi/qase-pytest/'>
+          <img src='https://img.shields.io/pypi/dm/qase-pytest' />
+        </a>
+      </Fragment>
+    ),
+    color: 'success'
+  },
+  {
+    title: 'qase-javascript',
+    description: 'Qase TMS JavaScript Api Client',
+    href: 'https://github.com/qase-tms/qase-javascript',
+    badgesFunc: () => (
+      <Fragment>
+        <a href='https://github.com/qase-tms/qase-javascript/actions'>
+          <img src='https://img.shields.io/github/workflow/status/qase-tms/qase-javascript/Node%20package/master' />
+        </a>{' '}
+        <a href='https://www.npmjs.com/package/qaseio'>
+          <img src='https://img.shields.io/npm/v/qaseio' />
+        </a>{' '}
+        <a href='https://www.npmjs.com/package/qaseio'>
+          <img src='https://img.shields.io/npm/dm/qaseio' />
+        </a>
+      </Fragment>
+    ),
+    color: 'success'
+  },
+  {
+    title: 'cypress-qase-reporter',
+    description: 'Qase TMS JavaScript Api Client',
+    href: 'https://github.com/qase-tms/qase-cypress',
+    badgesFunc: () => (
+      <Fragment>
+        <a href='https://github.com/qase-tms/qase-cypress/actions'>
+          <img src='https://img.shields.io/github/workflow/status/qase-tms/qase-cypress/Node%20package/master' />
+        </a>{' '}
+        <a href='https://www.npmjs.com/package/cypress-qase-reporter'>
+          <img src='https://img.shields.io/npm/v/cypress-qase-reporter' />
+        </a>{' '}
+        <a href='https://www.npmjs.com/package/cypress-qase-reporter'>
+          <img src='https://img.shields.io/npm/dm/cypress-qase-reporter' />
+        </a>
+      </Fragment>
+    ),
+    color: 'success'
+  }
+]
+
 const legacy = [
   {
     title: 'cattrs-3.8',
@@ -62,6 +161,7 @@ const legacy = [
     color: 'warning'
   }
 ]
+
 const examples = [
   {
     title: 'Python API tests example',
@@ -91,10 +191,12 @@ const examples = [
     color: 'secondary'
   }
 ]
+
 const others = []
 
 const projects = [
   { name: 'Maintained projects', list: maintained },
+  { name: 'Qase TMS projects', list: qase },
   { name: 'Legacy projects', list: legacy },
   { name: 'Examples', list: examples },
   { name: 'Something other', list: others }
